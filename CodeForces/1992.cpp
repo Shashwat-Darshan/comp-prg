@@ -42,13 +42,12 @@ ll mod_div(ll a, ll b) { return mod_mul(a, mod_inv(b)); }
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 void solve()
 {
-    ll n,m,k;cin>>n>>m>>k;vector<pair<char, int>> arr(n); 
+    ll n,m,k;cin>>n>>m>>k;vector<pair<char, int>> arr; 
     int n_l=0;
     for(int i=0;i<n;i++){
         char kk;cin>>kk;
         if (kk=='L') n_l++;
-        arr[i].ss=kk;
-        arr[i].ff=n_l;
+         arr.push_back(make_pair(kk, n_l));
     }
     f(i,0,n-1){
         cout<<arr[i].ff<<" "<<arr[i].ss<<endl;
